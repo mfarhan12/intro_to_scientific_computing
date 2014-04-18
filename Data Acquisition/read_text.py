@@ -1,14 +1,9 @@
-
 # Read all the text data into memory
 file = open('sample_text.txt', 'r')
 file_data = file.read()
-file.close()
+print file_data
 
-# Read
-
-
-
-
-
-
-
+# Reset file line
+file.seek(0)
+for data in file:
+	print data.rstrip("\n")
